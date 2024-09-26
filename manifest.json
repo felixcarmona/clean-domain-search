@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Clean Domain Search",
+  "version": "1.0.0",
+  "description": "Remove .blog domains from Lean Domain Search",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leandomainsearch.com/search/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
